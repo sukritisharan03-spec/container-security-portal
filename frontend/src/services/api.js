@@ -1,5 +1,4 @@
-const API_BASE = "https://jenny-suzuki-stones-preservation.trycloudflare.com/api";
-
+const API_BASE = "https://flag-madrid-folk-bra.trycloudflare.com/api";
 export const endpoints = {
   overview: `${API_BASE}/overview`,
   dashboard: `${API_BASE}/dashboard`,
