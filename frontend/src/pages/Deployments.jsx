@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { endpoints } from "../services/api";
 
 function Deployments() {
   const [deployments, setDeployments] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/deployments")
+    fetch(endpoints.deployments)
       .then((res) => res.json())
       .then((data) => {
         setDeployments(data.deployments || []);

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { endpoints } from "../services/api";
 
 function Compliance() {
   const [checks, setChecks] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/compliance")
+   fetch(endpoints.compliance)
       .then((res) => res.json())
       .then((data) => setChecks(data.checks || []))
       .catch((err) => console.log(err));

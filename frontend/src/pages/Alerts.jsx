@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-
+import { endpoints } from "../services/api";
 function Alerts() {
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/alerts")
+   fetch(endpoints.alerts)
       .then((res) => res.json())
       .then((data) => setAlerts(data.alerts || []))
       .catch((err) => console.log(err));
